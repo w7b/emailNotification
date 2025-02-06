@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  bff:
+    container_name: notifications
+    build: .
+    ports:
+      - "8082:8082"
+    networks:
+      - java-network
+
+networks:
+  java-network:
+    driver: bridge
